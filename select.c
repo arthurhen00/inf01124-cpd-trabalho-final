@@ -210,32 +210,30 @@ void select_tag(char tags[], ptLSE_tags *vetor_tabela[], ptLSE *vetor_tabela_pla
                 }
             }else{
                 if(!strcmp(format_name_table, format_name)){
-                    
                     for(int i = 0; i < count1; i++){
-                        //printf("[%d - %d]\n", id_player[i][0], ptAux->id_player);
                         if(id_player[i][0] == ptAux->id_player){
                             id_player[count2][1] = ptAux->id_player;
                             count2++;
                         }
-                    }//printf("%d\n", count2);
-
-                    for(int i = 0; i < count2; i++){
-                        id_player[i][0] = id_player[i][1];
-                        //printf("[%d]\n", id_player[i][0]);
                     }
-                    //if(count2 != 0){
-                    //    count3 = count2;
-                    //}
                 }
             } 
         }
+
+        if(passada != 1){
+            for(int i = 0; i < count2; i++){
+                id_player[i][0] = id_player[i][1];
+            }//printf("[%d]\n", count2);
+            count1 = count2;
+        }
+
+        // atualizar o registrador aqui
+        // printar o count2 aqui
+
         passada++;
         token = strtok(NULL, ",");
-    }//printf("|%d %d %d|",count2, count1, count3);
+    }
 
-    //if(count3 == 0){
-    //    count3 = count1;
-    //}
     if(passada == 2){
         count2 = count1;
     }
