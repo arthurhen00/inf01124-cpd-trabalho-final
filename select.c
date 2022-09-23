@@ -223,9 +223,9 @@ void select_tag(char tags[], ptLSE_tags *vetor_tabela[], ptLSE *vetor_tabela_pla
                         id_player[i][0] = id_player[i][1];
                         //printf("[%d]\n", id_player[i][0]);
                     }
-                    if(count2 != 0){
-                        count3 = count2;
-                    }
+                    //if(count2 != 0){
+                    //    count3 = count2;
+                    //}
                 }
             } 
         }
@@ -233,14 +233,17 @@ void select_tag(char tags[], ptLSE_tags *vetor_tabela[], ptLSE *vetor_tabela_pla
         token = strtok(NULL, ",");
     }//printf("|%d %d %d|",count2, count1, count3);
 
-    if(count3 == 0){
-        count3 = count1;
+    //if(count3 == 0){
+    //    count3 = count1;
+    //}
+    if(passada == 2){
+        count2 = count1;
     }
 
     // vetor id_player[i][0] com os ids da minha busca
     // USA COUNT3; tem um jeito melhor
     ptLSE *ptAux1;
-    for(int i = 0; i < count3; i++){
+    for(int i = 0; i < count2; i++){
         int hash = chave_horner(id_player[i][0], PLAYER_TABLE_SIZE);
         for(ptAux1 = vetor_tabela_player[hash]; ptAux1 != NULL; ptAux1 = ptAux1->prox){  
             if(ptAux1->id == id_player[i][0]){
