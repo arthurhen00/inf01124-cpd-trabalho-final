@@ -24,6 +24,11 @@ int main(){
     inicializa_lista_tabela_hash(tabela7507_player, PLAYER_TABLE_SIZE);
 
     FILE *arq0 = fopen("INF01124_FIFA21_clean/players.csv", "r");
+    if(!arq0){
+        printf("\nErro ao abrir o arquivo ***INF01124_FIFA21_clean/players.csv*** --- (caminho nao encontrado)\n\n");
+        fclose(arq0);
+        return 0;
+    }
     fgets(entrada, NAME_SIZE, arq0); // COLUNAS -> lixo
     int qtd_entrada = 0;
     while(feof(arq0) == 0 && qtd_entrada <= 18945){
@@ -71,6 +76,11 @@ int main(){
     inicializa_lista_tabela_hash_rating(tabela_rating, RATING_TABLE_SIZE);
 
     FILE *arq1 = fopen("INF01124_FIFA21_clean/rating.csv", "r");
+    if(!arq1){
+        printf("\nErro ao abrir o arquivo ***INF01124_FIFA21_clean/rating.csv*** --- (caminho nao encontrado)\n\n");
+        fclose(arq1);
+        return 0;
+    }
     fgets(entrada, NAME_SIZE, arq1); // COLUNAS -> lixo
     while(feof(arq1) == 0){
         fgets(entrada, NAME_SIZE, arq1);
@@ -105,6 +115,11 @@ int main(){
     inicializa_lista_tabela_hash_tags(tabela_tags, TAGS_TABLE_SIZE);
 
     FILE *arq2 = fopen("INF01124_FIFA21_clean/tags.csv", "r");
+    if(!arq2){
+        printf("\nErro ao abrir o arquivo ***INF01124_FIFA21_clean/tags.csv*** --- (caminho nao encontrado)\n\n");
+        fclose(arq2);
+        return 0;
+    }
     fgets(entrada, NAME_SIZE, arq2); // COLUNAS -> lixo
     while(feof(arq2) == 0){
         fgets(entrada, NAME_SIZE, arq2);
