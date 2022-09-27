@@ -16,7 +16,7 @@ Comando para compilar:
 
 ### $ search (prefix)
  
-Retorna 10 jogadores que começam pelo prefixo passado, em ordem alfabetica.
+Retorna 10 jogadores que começam pelo prefixo passado, em ordem alfabética.
  
 Ex:
  
@@ -24,7 +24,7 @@ Ex:
 
 ### $ user (number)
 
-Retorna 20 jogadores avaliados pelo usuario passado, em ordem decrescente do rating dado.
+Retorna 20 jogadores avaliados pelo usuário passado, em ordem decrescente do rating dado.
 
 Ex:
 
