@@ -2,6 +2,7 @@
 
 A maioria dos testes foram realizados com os arquivos da pasta "INF01124_FIFA21_clean"  
 Incluir a pasta "INF01124_FIFA21_clean" com os arquivos players.csv, rating.csv, tags.csv  
+
 Comando para compilar:
 
 ```
